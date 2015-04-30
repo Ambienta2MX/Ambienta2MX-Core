@@ -1,12 +1,21 @@
 {
-"place":{
-  "coordinates":[Number],
-  "height":Number
-},
-"name":String,
-"state":String,
-"city":String,
-"fullName":String,
-"zipCode":Number,
-"extraInfo":[String]
+	"sexagesimal_coordinates":{
+        "hex_lat":185359.0, 
+        "hex_lon":1021403.0,     
+    },
+    "itrf_coordinates":{
+        "itrf_lat":-102.235833,
+        "itrf_lon":18.899722,    
+    },
+    "nad27_coordinates":{
+        "nad27_lat":18.899039,
+        "nad27_lon":18.899039,
+    },
+    "height":Number,
+	"name":String,
+	"state":String,
+	"city":String,
+	"fullName":String,
+	"zipCode":Number,
+	"extraInfo":[String]
 }
