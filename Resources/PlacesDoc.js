@@ -1,0 +1,12 @@
+{
+"place":{
+  "coordinates":[Number],
+  "height":Number
+},
+"name":String,
+"state":String,
+"city":String,
+"fullName":String,
+"zipCode":Number,
+"extraInfo":[String]
+}
