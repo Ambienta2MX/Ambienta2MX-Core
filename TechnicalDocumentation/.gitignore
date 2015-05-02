@@ -2,3 +2,5 @@
 *.synctex.gz
 *.aux
 *.log
+*.out
+*.dvi
