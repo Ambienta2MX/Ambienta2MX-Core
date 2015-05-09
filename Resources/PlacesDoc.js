@@ -1,12 +1,28 @@
 {
-"place":{
-  "coordinates":[Number],
-  "height":Number
-},
-"name":String,
-"state":String,
-"city":String,
-"fullName":String,
-"zipCode":Number,
-"extraInfo":[String]
+   "location":{
+      "type":"Point",
+      "coordinates":[
+         Number,
+         Number
+      ]
+   },
+   "sexagesimal_coordinates":[
+      Number,
+      Number
+   ],
+   "itrf_coordinates":[
+      Number,
+      Number
+   ],
+   "nad27_coordinates":[
+      Number,
+      Number
+   ],
+   "height":Number,
+   "town":String,
+   "state":String,
+   "city":String,
+   "fullName":String,
+   "zipCode":String,
+   "extraInfo":[String]
 }
