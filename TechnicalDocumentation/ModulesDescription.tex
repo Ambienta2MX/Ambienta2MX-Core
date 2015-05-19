@@ -36,16 +36,26 @@
     \paragraph{Todas las bases se encontrarán funcionando bajo un modelo de base de datos documental teniendo una alimentación bajo demanda, es decir, el contenido gestionado irá aumentando conforme las éstos vayan siendo solicitados.}
 \section{Módulos de Ambienta2MX.}
   \subsection{Friendly Dolphin.}
+   	\subsubsection{Definición}
+	\subsubsection{Diagrama por bloques.}
   \subsection{Cute Bunny.}
+  	\subsubsection{Definición}
+  	\subsubsection{Diagrama por bloques.}
   \subsection{Ancient Tortoise.}
+  	\subsubsection{Definición}
+  	\subsubsection{Diagrama por bloques.}
   \subsection{Smart Owl.}
+  	\subsubsection{Definición}
+  	\subsubsection{Diagrama por bloques.}
   \subsection{Clever Beaver.}
+  	\subsubsection{Definición}
+  	\subsubsection{Diagrama por bloques.}
   \subsection{Fast Eagle.}
 	  \subsubsection{Definición}
 	  	\paragraph{El módulo Fast Eagle formará parte de la arquitectura final de Ambienta2MX. El propósito principal de este módulo es brindar la información cartográfica de México por medio de un servicio expuesto, considerando latitud, longitud o nombre de la localidad deseada.}
   		\paragraph{Fast Eagle se encargará de la lectura, carga, verificación y resolución de los archivos brindados por el (Instituto Nacional de Estadística y Geografía) INEGI en la información pública que tiene de la cartografía del territorio nacional.}
 	  	\paragraph{La información que proporciona el INEGI carece de campos esenciales para la estandarización de los datos cartográficos, para dar solución a ese contratiempo se hará uso de servicios externos que ya cuentan con información definida, es decir, que su información ha pasado bajo un cierto proceso de limpieza y regulación, por ejemplo, los servicios de Google Places API y GeoHack.}
-	  \subsubsection{Diagrama de Procesos.}
+	  \subsubsection{Diagrama por bloques.}
 	  	\paragraph{Fast Eagle contará con varios procesos a ser desarrollados, la integración de cada proceso y su respectiva integración dará solución a un problema de estandarización, resolución y consulta de datos geográficos vía Latitud, Longitud y Ubicación.}
 	  	\newpage
 	  	\begin{landscape}
@@ -65,8 +75,18 @@
 	  \paragraph{Para poder exponer los datos, se hará uso de un servidor web mínimo orientado a micro servicios,  éste será un servicio público que formará parte de la infraestructura final de Ambienta2MX.}
 	  \paragraph{El servicio expuesto se encargará de las búsquedas a nivel base de datos y en caso de no encontrar la información buscará en terceros para poder agregarla a la base de datos y así ir mejorando el contenido de nuestro índice cartográfico.}
 	  \paragraph{Se usará Groovy y Vertx para el desarrollo de Fast Eagle, esto debido a la fácil integración entre los lenguajes y tecnologías, también debido a que se busca una gran escalabilidad y fácil soporte para la plataforma en caso de que ésta lo necesite.}
-	  \paragraph{Para la automatización de la ejecución de las pruebas, el proceso de compilación y despliegue del módulo para su ejecución se hará uso de Gradle que permite crear tareas a través del lenguaje de programación Groovy.}
+	  \paragraph{Para la automatización de la ejecución de las pruebas, el proceso de compilación y despliegue del módulo así como para su ejecución se hará uso de Gradle que permite crear tareas a través del lenguaje de programación Groovy.}
   \subsection{Hard Ant.}
+  	\subsubsection{Definición}
+  	\subsubsection{Diagrama por bloques.}
   \subsection{Otros.}
-  \subsubsection{Módulo de WebScrapping - Wicked Fox.}
+    \subsubsection{Módulo de WebScrapping - Wicked Fox.}
+    \paragraph{Este módulo será el encargado de tomar información de plataformas que carecen de un servicio web definido, por ejemplo el Sistema Meteolorógico Nacional. Toda la información que exponen de forma diaria, semana, mensual y anual. Se encuentra bajo un formáto HTML que puede ser visualizado a través de algún navegador web al acceder a su sitio.}
+    \paragraph{Problemas cómo los anteriores suelen ser comunes a nivel nacional (principalmente plataformas gubernamentales), para poder hacer uso de esos recursos es necesario generar un módulo que de forma programática pueda extraer limpiar, extraer y adecuar la información.}
+    \paragraph{Al proceso antes descrito se le conoce cómo \emph{Web Scrapping}\cite{6}, que se define cómo la extracción de información de sitios web a través de medios programáticos o programas definidos.}
+    \paragraph{Éste módulo se encuetra implementado bajo un script escrito en Javascript usando PhantomJs cómo medio lógico y programático para la implemtación del Scrapping.}
+    \paragraph{ La definición básica de \textbf{\emph{Wicked Fox}} es tomar el recurso que brinda el SMN, extraer la información contenida en tablas y posteriormente mandar esta información al módulo \textbf{\emph{Smart Owl}} que se encargará de adecuar y después delegar el trabajo al módulo de registro masivo \textbf{\emph{Clever Beaver}} donde al final la información climatológica de cierta localidad será guardad en alguna de las bases de datos antes mencionadas.}
+    \paragraph{Éste módulo presenta una gran importancia debido a que actualmente se carece de un servicio a nivel nacional que brinde información meteorológica con cierta veracidad, si bien es cierto que otros sistemas extraen información de datos tomados por centrales mexicanas, el costo de éstos suele ser elevado.}
+    \paragraph{La extracción de la información se ejecutará \emph{al vuelo}, es decir, éste proceso se ejecutará cada que se pidan datos con un margen no mayor a una hora de cierta localidad o ubicación del territorio nacional.}
+    \paragraph{Para poder hacer uso de éste módulo es necesario brindar la información de la localidad via latitud/longitud o bien, a través de la localidad descrita, éstos datos serán proporcionados y resueltos por el módulo \textbf{\emph{Fast Eagle}} descrito anteriormente.}
       
