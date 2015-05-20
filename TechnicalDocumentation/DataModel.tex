@@ -2,9 +2,9 @@
 \chapter{Modelo de Datos}
 
 \section{Justificación}
-Se hará uso de un modelo de base de datos orientado a documentos. Para ello utlizarémos una base de datos no relacional MongoDB. Esta base de datos pertenece a la categoria NoSQL. \\
+Se hará uso de un modelo de base de datos orientado a documentos. Utlizarémos una base de datos no relacional MongoDB que guarda estructuras de datos en documentos JSON. Esta base de datos pertenece a la categoria NoSQL. \\
 \newline
-Las ventajas de una base de datos no relacional son las siguientes:
+Las características de una base de datos NoSQL son las siguientes:
 
 \begin{itemize}
   \item Modelo de datos flexible
@@ -12,3 +12,22 @@ Las ventajas de una base de datos no relacional son las siguientes:
   \item Sin esquemas
 \end{itemize}
 
+Este tipo de bases nos resultará últi debido a que se procesarán grandes volúmenes de información para mostrar un historial de la información climática que se vaya persistiendo. 
+
+Se escogió una base de datos orientada a documentos ya que la aplicación está orientada al análisis de datos y la obtención de información en tiempo real; además de que el uso de transacciones complejas no será necesario. 
+
+\section{Descripción}
+Para la persistencia de la información hemos definido los siguientes 3 documentos:   
+\begin{itemize}
+  \item Places
+  \item Pollution
+  \item Weather  
+\end{itemize}
+
+\subsection{Places}
+
+
+\subsection{Pollution}
+
+
+\subsection{Weather}
