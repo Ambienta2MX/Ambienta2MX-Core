@@ -2,34 +2,41 @@
 \chapter{Modelo de Datos}
 
 \section{Justificación}
-Se hará uso de un modelo de base de datos orientado a documentos. Utlizarémos una base de datos no relacional MongoDB que guarda estructuras de datos en documentos JSON. Esta base de datos pertenece a la categoria NoSQL. \\
+
+Se hará uso de un modelo de base de datos orientado a documentos. También se contará con un esquema no relacional, es decir, se carece de una normalización definida, haciendo uso de  MongoDB, que se encargará de persistir y manejar las estructuras de datos en documentos JSON. Esta base de datos pertenece a la categoria NoSQL.
 \newline
 Las características de una base de datos NoSQL son las siguientes:
-
 \begin{itemize}
-  \item Modelo de datos flexible
-  \item Buen rendimiento en clusters 
-  \item Sin esquemas
+  \item Modelo de datos flexible.
+  \item Buen rendimiento en clusters. 
+  \item Sin esquemas.
 \end{itemize}
 
-Este tipo de bases nos resultará últi debido a que se procesarán grandes volúmenes de información para mostrar un historial de la información climática que se vaya persistiendo. 
+Este tipo de bases resultan útiles debido a que se se pretende procesar grandes volúmenes de información para mostrar un historial de la información climática que se vaya persistiendo. 
 
-Se escogió una base de datos orientada a documentos ya que la aplicación está orientada al análisis de datos y la obtención de información en tiempo real; además de que el uso de transacciones complejas no será necesario. 
+Las tecnologías para grandes volumenes de información son relativamente nuevas; estas surgieron debido a la necesidad que tenían empresas grandes como Google y Amazon. La información fue convertida de un modelo relacional a un modelo basado en documentos, jerárquico o basado en columnas usando proceso de denormalización, ésto con la finalidad de dar un orden a la información considerando simplemente consultas de cierto tipo evitando así operaciones típicas del álgebra relacional cómo el Producto Cartesiano, que implicaba el uso de grandes recursos.
+
+Las tecnologías de tipo NoSQL se orientan a consultas y no a transacción. Lo que brinda un fácil acceso a la información, una estructura de los datos orientada a su posterior análisis, respuestas en tiempo real y una gran capacidad de escalar y replicar. \cite{10}
+
+Empresas cómo Foursquare, Google, Amazon, Uber o Twitter, han optado por complementar la información que persisten de forma relacional con modelos orientados a documentos usando tecnologías como Hbase, MongoDB, BigTable, DynamoDB, por citar algunos ejemplos. \cite{11} \cite{12}
 
 \section{Descripción}
-Para la persistencia de la información hemos definido los siguientes 3 documentos:   
+Considerando la problematica y solución que plantea el equipo de Ambienta2MX, se ha optado por orientar el sistema a consultas usando documentos como modelo de datos base. La información que será guardada y posteriormente consultada por otros módulos del ecosistema Ambienta2MX seguirá un esquema propuesto por el equipo de trabajo, éste recopila la estructura de sistemas que proveen información climática cómo lo son weather.gov, forecast.io, Weather Underground, proyecto INSPIRE (Unión Europea), Servicio Meteorológico Nacional, entre otros. \cite{13} \cite{14} \cite{15}
+\\
+Para la persistencia de la información se han definido los siguientes documentos:   
 \begin{itemize}
   \item Places
   \item Pollution
   \item Weather  
 \end{itemize}
 
+\newpage
 \subsection{Places}
-  \lstinputlisting[language=Python]{../Resources/PlacesDoc.js} 
-
+  \lstinputlisting[language=Javascript]{../Resources/PlacesDoc.js} 
+\newpage
 \subsection{Pollution}
-  \lstinputlisting[language=Python]{../Resources/PollutionDoc.js} 
-
+  \lstinputlisting[language=Javascript]{../Resources/PollutionDoc.js} 
+\newpage
 \subsection{Weather}
-  \lstinputlisting[language=Python]{../Resources/WeatherDoc.js} 
+  \lstinputlisting[language=Javascript]{../Resources/WeatherDoc.js} 
 
