@@ -105,8 +105,8 @@
 	  \paragraph{El módulo indicará que datos necesitan una resolución y cuáles pueden ser estandarizados y posteriormente almacenados en la base de datos.}
 	  \paragraph{\textbf{\emph{Parser}} tomará los datos que el proceso de validación le arroje para transformar al estado propuesto por el equipo de trabajo (Véase modelo de datos). Considerando un proceso de resolución en caso de que la información proporcionada por el INEGI se encuentre incompleta no sea válida.}
 	  \paragraph{Para toda la información que carezca de datos correctos \textbf{\emph{Solver}} buscará una resolución en servicios de terceros, después de la resolución, los datos serán guardados en el gestor de bases de datos bajo el formato propuesto por el equipo de trabajo.}
-	  \paragraph{\textbf{\emph{Model}} es la capa de interacción con la base de datos, ésta se encarga de las operaciones mejor conocidas como CRUD (Create, Read, Update and Delete),  persistiendo la información en la base de datos.}
-	  \paragraph{Para poder exponer los datos, se hará uso de un servidor web mínimo orientado a micro servicios,  éste será un servicio público que formará parte de la infraestructura final de Ambienta2MX.}
+	  \paragraph{\textbf{\emph{Model}} es la capa de interacción con la base de datos, ésta se encarga de las operaciones mejor conocidas como CRUD (Create, Read, Update and Delete),  persistiendo la información en MongoDB.}
+	  \paragraph{Para poder exponer los datos, se hará uso de un servidor web minimalista orientado a micro servicios, éste será un servicio público que formará parte de la infraestructura final de Ambienta2MX.}
 	  \paragraph{El servicio expuesto se encargará de las búsquedas a nivel base de datos y en caso de no encontrar la información buscará en terceros para poder agregarla a la base de datos y así ir mejorando el contenido de nuestro índice cartográfico.}
 	  \paragraph{Se usará Groovy y Vertx para el desarrollo de Fast Eagle, esto debido a la fácil integración entre los lenguajes y tecnologías, también debido a que se busca una gran escalabilidad y fácil soporte para la plataforma en caso de que ésta lo necesite.}
 	  \paragraph{Para la automatización de la ejecución de las pruebas, el proceso de compilación y despliegue del módulo así como para su ejecución se hará uso de Gradle que permite crear tareas a través del lenguaje de programación Groovy.}
@@ -124,7 +124,7 @@
 	  	\begin{landscape}
 		  	\begin{figure}[h!]
 		  	\centering
-			  \includegraphics[width=22.5cm,height=12cm]{./images/DiagramaWickedFox.png}
+			  \includegraphics[width=11cm,height=6cm]{./images/DiagramaWickedFox.png}
 			  \caption{Diagrama General de Wicked Fox}
 			\end{figure}
 	  	\end{landscape}
@@ -132,4 +132,3 @@
     \paragraph{Éste módulo presenta una gran importancia debido a que actualmente se carece de un servicio a nivel nacional que brinde información meteorológica con cierta veracidad, si bien es cierto que otros sistemas extraen información de datos tomados por centrales mexicanas, el costo de éstos suele ser elevado.}
     \paragraph{La extracción de la información se ejecutará \emph{al vuelo}, es decir, éste proceso se ejecutará cada que se pidan datos con un margen no mayor a una hora de cierta localidad o ubicación del territorio nacional.}
     \paragraph{Para poder hacer uso de éste módulo es necesario brindar la información de la localidad via latitud/longitud o bien, a través de la localidad descrita, éstos datos serán proporcionados y resueltos por el módulo \textbf{\emph{Fast Eagle}} descrito anteriormente.}
-      
