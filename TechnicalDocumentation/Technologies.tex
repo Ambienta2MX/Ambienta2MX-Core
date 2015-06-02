@@ -1,26 +1,37 @@
 \clearpage
 \chapter{Tecnologías}
-\section{Ventajas y Desventajas}
+
+\paragraph{Para el desarrollo del proyecto decidimos utilizar un lenguaje de programación dinámico que corre sobre la JVM (Groovy) y el conjunto de herramientas que existen en su ecosistema. Además, para la parte de la aplicación web será necesario integrar tecnologías JavaScript que nos ayuden en la interacción con la aplicación que expone datos para mostrar la información que se requiera.}
+
+\paragraph{A continuación se describen las ventajas de las tecnologías que hemos decidido utilizar para el desarrollo del proyecto}
 
 \begin{center}
-  \begin{tabular}{ | c | p{6cm} | p{6cm} | }
-    \hline
-    Nombre & Ventajas & Desventajas \\
-    \hline
-    MongoDB & \tabitem Implementa funciones espaciales para encontrar información relevante de ubicaciones específicas. & \tabitem Difícultad para dar seguimiento a los cambios ya que la estructura de la base cambia constantemente. \\
-            & \tabitem Útil para el procesamiento de grandes cantidades de información. & \\
-    \hline
-    Groovy & \tabitem Lenguaje expresivo. & \\
-           & \tabitem Se pueden integrar fácilmente todas las bibliotecas de Java ya que corre sobre la JVM. & \\
-           & \tabitem Closures & \\
-    \hline
-    Gradle  & \tabitem Sigue un enfoque de construcción por convención. & \tabitem La curva de aprendizaje es pronunciada si no se han utilizado antes herramientas como Ant o Maven \\
-            & \tabitem Utiliza un poderoso lenguaje específico de dominio. (Groovy) & \\
+  \begin{tabular}{ | c | p{10cm} | }
+    \toprule
+    Nombre & Ventajas \\
+    \midrule
+    \raisebox{-\totalheight}{\includegraphics[width=0.3\textwidth, height=30mm]{images/mongo}} &
+      \begin{itemize}[topsep=0pt]
+        \item Implementa funciones espaciales para encontrar información relevante de ubicaciones específicas.
+        \item Útil para el procesamiento de grandes cantidades de información. 
+      \end{itemize} \\
+    \midrule    
+
+    \raisebox{-\totalheight}{\includegraphics[width=0.3\textwidth, height=25mm]{images/groovy}} &
+     \begin{itemize}[topsep=0pt]
+        \item Lenguaje expresivo que incrementa la productividad. Se reduce el azucar sintactico en comparación con lenguajes como C++ y Java y la curva de aprendizaje es muy pequeña si ya se conoce Java.
+        \item Se pueden integrar fácilmente todas las bibliotecas de Java ya que corre sobre la JVM. 
+        \item Closures 
+      \end{itemize} \\
+    \midrule
+    
+    Gradle  & \tabitem Sigue un enfoque de construcción por convención. \\
+            & \tabitem A diferencia de otras herramientas para la construcción de proyectos como Maven o Ant que utilizan XML, Gradle hace uso de un poderoso lenguaje específico de dominio (Groovy) para la definición de las tareas que deben ejecutarse. \\
             & \tabitem Cuenta con un administrador de dependencias que se encarga de 
-                       descargarlas y las deja disponibles para su uso en la aplicación. & \\
+                       descargarlas y las deja disponibles para su uso en la aplicación. \\
     \hline
 
-    Gulp  & \tabitem  Permite la automatización y ejecución de tareas para la construcción de un proyecto JavaScript.& \\
+    Gulp  & \tabitem  Permite la automatización y ejecución de tareas para la construcción de un proyecto JavaScript. \\
     \hline
    
   \end{tabular}
@@ -28,18 +39,18 @@
 
 \clearpage
 \begin{center}
-  \begin{tabular}{ | c | p{6cm} | p{6cm} | }
+  \begin{tabular}{ | c | p{10cm} | }
     \hline
-    Yeoman & \tabitem Define la estructura de directorios y archivos para un proyecto JavaScript & \\
-           & \tabitem Cuenta con varios generadores para crear el código repetitivo que se necesita para iniciar un proyecto. & \\
-           & \tabitem Define tareas para que el desarrollador se concentre sólo en realizar la funcionalidad de la aplicación. & \\
+    Yeoman & \tabitem Define la estructura de directorios y archivos para un proyecto JavaScript \\
+           & \tabitem Cuenta con varios generadores para crear el código repetitivo que se necesita para iniciar un proyecto. \\
+           & \tabitem Define tareas para que el desarrollador se concentre sólo en realizar la funcionalidad de la aplicación. \\
     \hline
-    Ember & \tabitem Incrementa la productividad al desarrollar aplicaciones single page. & \tabitem Curva de aprendizaje muy pronunciada. \\
-          & \tabitem Ember Data. & \\
-          & \tabitem & \\
+    Ember & \tabitem Incrementa la productividad al desarrollar aplicaciones single page. \\
+          & \tabitem Ember Data. \\
     \hline
-    PhantomJS & \tabitem Automatización del navegador para realizar pruebas funcionales. & \\
-              & \tabitem Opción para hacer screenshots de algún flujo de la aplicación. & \\
+
+    PhantomJS & \tabitem Automatización del navegador para realizar pruebas funcionales. \\
+              & \tabitem Opción para hacer screenshots de algún flujo de la aplicación. \\
     \hline
 
   \end{tabular}
