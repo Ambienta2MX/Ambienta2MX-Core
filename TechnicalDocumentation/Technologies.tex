@@ -1,6 +1,5 @@
 \clearpage
 \chapter{Tecnologías}
-
 \paragraph{Para el desarrollo del proyecto decidimos utilizar un lenguaje de programación dinámico que corre sobre la JVM (Groovy) y el conjunto de herramientas que existen en su ecosistema. Además, para la parte de la aplicación web será necesario integrar tecnologías JavaScript que nos ayuden en la interacción con la aplicación que expone datos para mostrar la información que se requiera.}
 
 \paragraph{A continuación se describen las ventajas de las tecnologías que hemos decidido utilizar para el desarrollo del proyecto}
@@ -24,34 +23,45 @@
         \item Closures 
       \end{itemize} \\
     \midrule
+     
+    \raisebox{-\totalheight}{\includegraphics[width=0.3\textwidth, height=15mm]{images/gradle}} &
+    \begin{itemize}[topsep=0pt]
+      \item Sigue un enfoque de construcción por convención.
+      \item A diferencia de otras herramientas para la construcción de proyectos como Maven o Ant que utilizan XML, Gradle hace uso de un poderoso lenguaje específico de dominio (Groovy) para la definición de las tareas que deben ejecutarse.
+      \item Cuenta con un administrador de dependencias que se encarga de descargarlas y las deja disponibles para su uso en la aplicación.
+    \end{itemize} \\
+    \midrule
     
-    Gradle  & \tabitem Sigue un enfoque de construcción por convención. \\
-            & \tabitem A diferencia de otras herramientas para la construcción de proyectos como Maven o Ant que utilizan XML, Gradle hace uso de un poderoso lenguaje específico de dominio (Groovy) para la definición de las tareas que deben ejecutarse. \\
-            & \tabitem Cuenta con un administrador de dependencias que se encarga de 
-                       descargarlas y las deja disponibles para su uso en la aplicación. \\
-    \hline
-
-    Gulp  & \tabitem  Permite la automatización y ejecución de tareas para la construcción de un proyecto JavaScript. \\
-    \hline
-   
+    \raisebox{-\totalheight}{\includegraphics[width=1.5cm,height=3cm]{images/gulp}} &
+    \begin{itemize}[topsep=0pt]
+      \item Permite la automatización y ejecución de tareas para la construcción de un proyecto JavaScript.  
+    \end{itemize} \\
+    
+    \bottomrule
   \end{tabular}
 \end{center}
 
 \clearpage
 \begin{center}
   \begin{tabular}{ | c | p{10cm} | }
-    \hline
-    Yeoman & \tabitem Define la estructura de directorios y archivos para un proyecto JavaScript \\
-           & \tabitem Cuenta con varios generadores para crear el código repetitivo que se necesita para iniciar un proyecto. \\
-           & \tabitem Define tareas para que el desarrollador se concentre sólo en realizar la funcionalidad de la aplicación. \\
-    \hline
-    Ember & \tabitem Incrementa la productividad al desarrollar aplicaciones single page. \\
-          & \tabitem Ember Data. \\
-    \hline
-
-    PhantomJS & \tabitem Automatización del navegador para realizar pruebas funcionales. \\
-              & \tabitem Opción para hacer screenshots de algún flujo de la aplicación. \\
-    \hline
-
+    \toprule 
+      \raisebox{-\totalheight}{\includegraphics[width=0.3\textwidth, height=35mm]{images/yeoman}} &
+      \begin{itemize}[topsep=0pt]
+        \item Define la estructura de directorios y archivos para un proyecto JavaScript.
+        \item Cuenta con varios generadores para crear el código repetitivo que se necesita para iniciar un proyecto.
+        \item Define tareas para que el desarrollador se concentre sólo en realizar la funcionalidad de la aplicación.
+      \end{itemize} \\
+    \midrule
+      \raisebox{-\totalheight}{\includegraphics[width=0.3\textwidth, height=35mm]{images/ember}} &
+      \begin{itemize}[topsep=0pt]
+        \item Incrementa la productividad al desarrollar aplicaciones single page.
+      \end{itemize} \\
+    \midrule
+      \raisebox{-\totalheight}{\includegraphics[width=0.3\textwidth, height=35mm]{images/phantomjs}} &
+      \begin{itemize}[topsep=0pt]
+        \item Automatización del navegador para realizar pruebas funcionales.
+        \item Opción para hacer screenshots de algún flujo de la aplicación.
+      \end{itemize} \\
+   \bottomrule 
   \end{tabular}
 \end{center}
