@@ -40,12 +40,14 @@
     \subsubsection{Definición}
       \paragraph{Éste módulo es el encargado de brindar la información procesada al usuario a través de una página de internet. Es el módo visual que los usuarios finales tendrán para poder interactuar con el ecosistema Ambienta2MX.}
       \paragraph{Se presenta cómo un módulo web que consumirá la información procesada y almacenada por las cuatro bases (MX1,MX2,MX3,MX4) y la base de soporte (Places).}
-      \paragraph{La principal función es la de consulta y visualización de datos. Es la capa más expuesta y menos técnica de Ambienta2MX ya que es la que tendrá interacción directa con usuarios no técnicos, sin embargo, contará con los procesos necesarios para poder extraer información de las demás plataformas en formatos convencionales cómo JSON, XML o CSV para uso posterior del usuario.}
-      \paragraph{Interactua de forma directa con los bloques \textbf{\emph{Ancient Tortoise}} y \textbf{\emph{Cute Bunny}}, que forman parte de la segunda capa de exposición de datos de Ambienta2MX. Se comunica con los demás módulos mediante servicios de tipo REST que funcionan bajo el patrón de convención sobre configuración\cite{8}, brindando así una gran compatibilidad con éstos además de mejorar el tiempo de desarrollo debido a que no es necesario generar código único y se opta por la reutilización de código y bibliotecas que siguen el mismo método de trabajo.}
-  \subsubsection{Diagrama por bloques}
-   \paragraph{Friendly Dolpin contará con varios procesos y módulos a ser desarrollados. Éste módulo se desarrollará usando tecnologías cómo HTML, Javascript y CSS, además de contar con un ciclo continuo de desarrollo usando herramientas de apoyo cómo Yeoman, Gulp para el maquetado y gestión de tareas comunes en projectos de tipo web. A continuación se muestra el diagrama básico de la aplicación.}
+      \paragraph{La principal función es la de consulta y visualización de datos. Es la capa más expuesta y menos técnica de Ambienta2MX ya que es la que tendrá interacción directa con usuarios no técnicos, sin embargo, contará con los procesos necesarios para poder extraer información de las demás plataformas en formatos convencionales cómo JSON o XML para uso posterior del usuario.}
+      \paragraph{Interactua de forma directa con los bloques \textbf{\emph{Ancient Tortoise}} y \textbf{\emph{Cute Bunny}}, que forman parte de la segunda capa de exposición de datos de Ambienta2MX. Se comunica con los demás módulos mediante servicios de tipo REST que funcionan bajo el patrón de convención sobre configuración\cite{8}, brindando así una gran compatibilidad con éstos además de disminuir el tiempo de desarrollo debido a que no es necesario generar código único y se opta por la reutilización de éste y bibliotecas que siguen el mismo método de trabajo.}
+      \paragraph{Friendly Dolpin contará con varios procesos y módulos a ser desarrollados. Éste módulo se desarrollará usando tecnologías cómo HTML, Javascript y CSS, además de contar con un ciclo continuo de desarrollo usando herramientas de apoyo cómo Yeoman, Gulp para el maquetado y gestión de tareas comunes en projectos de tipo web.}
+      \paragraph{Se hará uso del servidor interno que ofrece Gulp junto con las tareas y gestión de bibliotecas de terceros. En cuanto al desarrollo de los estilos necesarios para las vistas se implementará Bootstrap cómo maquetado CSS y finalmente el manejo de vistas, peticiciones y lógica dentro del navegador de los clientes se implementará usando EmberJs.}
   \newpage
     \begin{landscape}
+    \subsubsection{Diagrama por bloques}
+   \paragraph{A continuación se muestra el diagrama básico de la aplicación:}
       \begin{figure}[b!]
       \centering
       \includegraphics[width=22.5cm,height=12cm]{./images/DiagramaFriendlyDolphin.png}
@@ -53,12 +55,11 @@
     \end{figure}
     \end{landscape}
   \newpage
-  \paragraph{Las tecnologías a usar para este módulo serán basicamente Javascript, HTML y CSS. Usando el servidor interno que ofrece Gulp junto con las tareas y gestión de bibliotecas de terceros. En cuanto al desarrollo de los estilos necesarios para las vistas se implementará Bootstrap cómo maquetado CSS y finalmente el manejo de vistas, peticiciones y lógica dentro del navegador de los clientes se implementará usando EmberJs.}
   \subsection{Cute Bunny}
     \subsubsection{Definición}
      \paragraph{El módulo \textbf{\emph{Cute Bunny}} es parte medular para la comunicación con otros sistemas. Cute Bunny es el encargado de proporcionar los respectivos servicios de tipo REST a otros sistemas o módulos que deseen consultar la información almacenada en las respectivas bases de tipo MX.}
-     \paragraph{La información de variables ambientales e índices de contaminación y calidad del aire, será expuesta por medio de peticiones HTTP que siguen un patrón Conv over Conf, es decir, sigue la misma estructura que otros sitemas y frameworks de desarrollo web, esto facilitará que aquellos desarrolladores y analistas que deseen acceder de forma programática no tengan que realizar demasiadas configuraciones y se adapten de forma orgánica al sistema.}
-     \paragraph{Considerando la naturaleza del sistema, que es un sistema primordialmente de consultas y extracción de información de sistemas externos, no es necesario contar con una extensa lógica de negocio. El núcleo de la aplicación será la exposición de datos y seguir la convención de servicios REST, cómo muestra el siguiente diagrama.}
+     \paragraph{La información de variables ambientales e índices de contaminación y calidad del aire, será expuesta por medio de peticiones HTTP que siguen un patrón ``Conv over Conf'', es decir, sigue la misma estructura que otros sitemas y frameworks de desarrollo web, esto facilitará que aquellos desarrolladores y analistas que deseen acceder de forma programática no tengan que realizar demasiadas configuraciones y se adapten de forma orgánica al sistema.}
+     \paragraph{Considerando la naturaleza del sistema, que es primordialmente de consultas y extracción de información de servicios externos, no es necesario contar con una extensa lógica de negocio. El núcleo de la aplicación será la exposición de datos y seguir la convención de servicios REST, considerando algunos ejemplos como los que muestra el siguiente diagrama.}
       \begin{figure}[h!]
         \centering
         \includegraphics[width=5cm,height=3cm]{./images/DiagramaREST.png}
@@ -93,10 +94,10 @@
   \subsection{Smart Owl}
     \subsubsection{Definición}
       \paragraph{La función principal del Smart Owl es la obtención de la información de diversas fuentes, tanto estáticas y dinámicas.} 
-      \paragraph{Todas la información que se encontrará en las bases de datos de tipo MX será obtenida a través de Smart Owl, muchas de las fuentes no cuentan con los datos climatológicos completos, principalmente las gubernamentales (CONAGUA, INEGI, SMN).}
+      \paragraph{Todas la información que se encontrará en las bases de datos de tipo MX será obtenida a través de Smart Owl, muchas de las fuentes no cuentan con los datos climatológicos completos, principalmente las gubernamentales como: CONAGUA, INEGI o SMN, por citar algunas.}
       \paragraph{Considerando esa problematica, Smart Owl buscará y tratará de resolver la información de los campos faltantes tomando como base distintas fuentes de datos, algunas establecidas y otras de tipo gubernamental.}
-      \paragraph{También se tomará información de fuentes que tipo dinámica,es decir, cuya información suele ser actualizada en entre periodos de una o dos horas. Estas fuentes suelen contar con RESTFul API's para consumo.}
-      \paragraph{El modelo de datos final podrá ser entonces persistido después de que haya sido resuelto completa o parcialmente. Se llevará el control de los metadatos considerando su origen, su fecha y algunos tags relacionados con sus éstos.}
+      \paragraph{También se tomará información de fuentes que tipo dinámica,es decir, cuya información suele ser actualizada en entre periodos de una o dos horas. Estas fuentes suelen contar con RESTFul API's para consumo de forma programática.}
+      \paragraph{El modelo de datos final podrá ser entonces persistido después de que haya sido resuelto completa o parcialmente. Se llevará el control de los metadatos considerando su origen, su fecha y algunos tags relacionados los que proveen la información.}
     \newpage
       \begin{landscape}
       \subsubsection{Diagrama por bloques.}
@@ -120,12 +121,13 @@
     \subsubsection{Definición}
       \paragraph{El módulo Fast Eagle formará parte de la arquitectura final de Ambienta2MX. El propósito principal de este módulo es brindar la información cartográfica de México por medio de un servicio expuesto, considerando latitud, longitud o nombre de la localidad deseada.}
       \paragraph{Fast Eagle se encargará de la lectura, carga, verificación y resolución de los archivos brindados por el (Instituto Nacional de Estadística y Geografía) INEGI en la información pública que tiene de la cartografía del territorio nacional.}
-      \paragraph{La información que proporciona el INEGI carece de campos esenciales para la estandarización de los datos cartográficos, para dar solución a ese contratiempo se hará uso de servicios externos que ya cuentan con información definida, es decir, que su información ha pasado bajo un cierto proceso de limpieza y regulación, por ejemplo, los servicios de Google Places API y GeoHack.}
+      \paragraph{El proceso de toma de datos del INEGI será ejecutado sólo una vez al inicio o primer despliegue del sistema. Esto debido a que la cartografía no deberá ser procesada de forma dinámica. Se usará un modelo de datos persistido Mongo para sus posteriores consultas.}
+      \paragraph{La información que proporciona el INEGI carece de campos esenciales para la estandarización de los información cartográfica, para dar solución a ese contratiempo se hará uso de servicios externos que ya cuentan con información definida, es decir, que su información ha pasado bajo un cierto proceso de limpieza y regulación, por ejemplo, los servicios de Google Places API.}
+      \paragraph{En caso de que no exista la información deseada por el usuario o algún otro módulo del sistema en la cartografía (base de datos llamada Places), Fast Eagle tratará de resolver la información en fuentes externas, persistiendo el modelo resuelto y regresando esa información al solicitante.}
     \subsubsection{Diagrama de sequencias}
     \begin{center}
       \includegraphics[width=16cm,height=10cm]{./images/FastEagleSequenceDiagram}
     \end{center}
-
     \subsubsection{Diagrama por bloques}
       \paragraph{Fast Eagle contará con varios procesos a ser desarrollados, la integración de cada proceso y su respectiva integración dará solución a un problema de estandarización, resolución y consulta de datos geográficos vía Latitud, Longitud y Ubicación.}
     \newpage
@@ -137,7 +139,7 @@
       \end{figure}
       \end{landscape}
     \newpage
-    \paragraph{En el diagrama se muestran cuatro módulos básicos, estos forman parte del núcleo de Fast Eagle, también podemos observar que se cuenta con la interacción de servicios de terceros como Google Places y GeoHack, también se cuenta con la exposición de los servicios a través de un servidor  web.}
+    \paragraph{En el diagrama se muestran cuatro módulos básicos, estos forman parte del núcleo de Fast Eagle, también podemos observar que se cuenta con la interacción de servicios de terceros como Google Places,  también se cuenta con la exposición de los servicios a través de un servidor  web.}
     \paragraph{El módulo de Validación \textbf{\emph{Validator}}, será el encargado de tomar las fuentes que el INEGI brinda al público en general en forma de archivos CSV, y realizar un proceso de validación a los datos que éstos tienen.}
     \paragraph{El módulo indicará que datos necesitan una resolución y cuáles pueden ser estandarizados y posteriormente almacenados en la base de datos.}
     \paragraph{\textbf{\emph{Parser}} tomará los datos que el proceso de validación le arroje para transformar al estado propuesto por el equipo de trabajo (Véase modelo de datos). Considerando un proceso de resolución en caso de que la información proporcionada por el INEGI se encuentre incompleta no sea válida.}
@@ -145,8 +147,6 @@
     \paragraph{\textbf{\emph{Model}} es la capa de interacción con la base de datos, ésta se encarga de las operaciones mejor conocidas como CRUD (Create, Read, Update and Delete),  persistiendo la información en MongoDB.}
     \paragraph{Para poder exponer los datos, se hará uso de un servidor web minimalista orientado a micro servicios, éste será un servicio público que formará parte de la infraestructura final de Ambienta2MX.}
     \paragraph{El servicio expuesto se encargará de las búsquedas a nivel base de datos y en caso de no encontrar la información buscará en terceros para poder agregarla a la base de datos y así ir mejorando el contenido de nuestro índice cartográfico.}
-    \paragraph{Se usará Groovy y Vertx para el desarrollo de Fast Eagle, esto debido a la fácil integración entre los lenguajes y tecnologías, también debido a que se busca una gran escalabilidad y fácil soporte para la plataforma en caso de que ésta lo necesite.}
-    \paragraph{Para la automatización de la ejecución de las pruebas, el proceso de compilación y despliegue del módulo así como para su ejecución se hará uso de Gradle que permite crear tareas a través del lenguaje de programación Groovy.}
   \subsection{Hard Ant}
     \subsubsection{Definición}
       \paragraph{Hard Ant es uno de los bloques funcionales base de Ambienta2MX, su función principal es la de enrutar las peticiones a las bases de tipo MX además de brindar la solución cartográfica (a nivel ubicación) interactuando con Fast Eagle.}
