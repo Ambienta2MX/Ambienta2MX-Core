@@ -20,15 +20,58 @@
     \paragraph{A lo largo del desarrollo de Ambienta2MX surgieron y surgirán eventos y sucesos inesperados que serán considerados como riesgos potenciales dependiendo el impacto que estos lleguen a tener.}
     \begin{table}[h]
     \centering
-      \begin{tabular}{lllll}
+      \begin{tabular}{|p{3cm}|lllll}
         \hline
-        \multicolumn{5}{c}{{\bf Tabla de Riesgos}} \\ \hline
-        \multicolumn{1}{|l|}{{\bf Descripcion}} & \multicolumn{1}{l|}{{\bf Tipo de Riesgo}} & \multicolumn{1}{l|}{{\bf Valoración}} & \multicolumn{1}{l|}{{\bf Probabilidad}} & \multicolumn{1}{l|}{{\bf Plan de acción}} \\ \hline
-        \multicolumn{1}{|l|}{Riesgo1} & \multicolumn{1}{l|}{Proyecto} & \multicolumn{1}{l|}{Tolerante} & \multicolumn{1}{l|}{10\%} & \multicolumn{1}{l|}{Ninguno} \\ \hline
-        \multicolumn{1}{|l|}{Riesgo2} & \multicolumn{1}{l|}{Técnico} & \multicolumn{1}{l|}{Tolerante} & \multicolumn{1}{l|}{10\%} & \multicolumn{1}{l|}{Ninguno} \\ \hline
-        \multicolumn{1}{|l|}{Riesgo3} & \multicolumn{1}{l|}{Negocio} & \multicolumn{1}{l|}{Serio} & \multicolumn{1}{l|}{20\%} & \multicolumn{1}{l|}{Actuar} \\ \hline
-        \multicolumn{1}{|l|}{Riesgo4} & \multicolumn{1}{l|}{Proyecto} & \multicolumn{1}{l|}{Serio} & \multicolumn{1}{l|}{10\%} & \multicolumn{1}{l|}{Actuar} \\ \hline
-        \multicolumn{1}{|l|}{Riesgo5} & \multicolumn{1}{l|}{Negocio} & \multicolumn{1}{l|}{Catastrófico} & \multicolumn{1}{l|}{10\%} & \multicolumn{1}{l|}{Actuar} \\ \hline
+        \multicolumn{5}{|c|}{{\bf Tabla de Riesgos}} \\ 
+        \hline
+          \multicolumn{1}{|p{3cm}|}{{\bf Descripcion}} & 
+          \multicolumn{1}{p{2cm}|}{{\bf Tipo de Riesgo}} & 
+          \multicolumn{1}{p{2cm}|}{{\bf Valoración}} & 
+          \multicolumn{1}{p{2cm}|}{{\bf Porcentaje}} & 
+          \multicolumn{1}{p{5cm}|}{{\bf Plan de acción}} \\ 
+        \hline
+          \multicolumn{1}{|p{3cm}|}{No disponibilidad de los servidores de Amazon} & 
+          \multicolumn{1}{p{2cm}|}{Técnico} & 
+          \multicolumn{1}{p{2cm}|}{Catastrófico} & 
+          \multicolumn{1}{p{2cm}|}{1\%} & 
+          \multicolumn{1}{p{5cm}|}{Migración parcial a servicios de hosting gratuitos como Heroku u Openshift.} \\ 
+        \hline
+          \multicolumn{1}{|p{3cm}|}{Falta de presupuesto} & 
+          \multicolumn{1}{p{2cm}|}{Proyecto} & 
+          \multicolumn{1}{p{2cm}|}{Serio} & 
+          \multicolumn{1}{p{2cm}|}{25\%} & 
+          \multicolumn{1}{p{5cm}|}{Buscar un proceso de incubación en empresas como Apache, Eclipse y migrar la plataforma a servicios de hosting gratuitos como Heroku u Openshift.} \\ 
+        \hline
+          \multicolumn{1}{|p{3cm}|}{Falta por razones personales de miembros del equipo} & 
+          \multicolumn{1}{p{2cm}|}{Proyecto} &
+          \multicolumn{1}{p{2cm}|}{Serio} & 
+          \multicolumn{1}{p{2cm}|}{25\%} & 
+          \multicolumn{1}{p{5cm}|}{Rediseñar y adaptar las tareas con nuevos integrantes y habilitar forma de trabajo remota considerando fines de semana.} \\ 
+        \hline
+          \multicolumn{1}{|p{3cm}|}{Extinción de recursos de información} & 
+          \multicolumn{1}{p{2cm}|}{Proyecto, Técnico} & 
+          \multicolumn{1}{p{2cm}|}{Catastrófico} & 
+          \multicolumn{1}{p{2cm}|}{10\%} & 
+          \multicolumn{1}{p{5cm}|}{Cambiar las reglas de negocio y buscar nuevas fuentes de información como SaaS y desplegar los módulos de estandarización nuevamente.} \\ 
+        \hline
+          \multicolumn{1}{|p{3cm}|}{Necesidad de escalabilidad de la plataforma} & 
+          \multicolumn{1}{p{2cm}|}{Técnico} & 
+          \multicolumn{1}{p{2cm}|}{Serio} & 
+          \multicolumn{1}{p{2cm}|}{10\%} & 
+          \multicolumn{1}{p{5cm}|}{Definir el tipo de escalabilidad a usar dependiendo los recursos monetarios existentes.} \\ 
+        \hline
+          \multicolumn{1}{|p{3cm}|}{Ataques de Denegación de Servicios (DoS)} & 
+          \multicolumn{1}{p{2cm}|}{Técnico} & 
+          \multicolumn{1}{p{2cm}|}{Tolerable} & 
+          \multicolumn{1}{p{2cm}|}{10\%} & 
+          \multicolumn{1}{p{5cm}|}{Cambiar el tipo de dirección en los servidores de Amazon y agregar caché al sistema.} \\ 
+        \hline
+          \multicolumn{1}{|p{3cm}|}{Adaptación a nuevos estandares} &
+          \multicolumn{1}{p{2cm}|}{Técnico} &
+          \multicolumn{1}{p{2cm}|}{Tolerabe} &
+          \multicolumn{1}{p{2cm}|}{15\%} &
+          \multicolumn{1}{p{5cm}|}{Rediseñar y extender la funcionalidad de la aplicación, dando soporte a ambos modelos de intercambio de datos.} \\ 
+        \hline
       \end{tabular}
       \caption{Analisis de Riesgos}
       \label{Analisis de riesgos}
