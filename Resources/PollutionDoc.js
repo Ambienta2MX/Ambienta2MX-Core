@@ -13,5 +13,6 @@
   "provider": [Object], // Providers list as provider:{information:content,information:url, ...}
   "sampleDate" : Date, // Sample date
   "lastUpdated": Date, // Grails generated information
-  "dateCreated": Date // Grails generated information
+  "dateCreated": Date, // Grails generated information
+  "fullName": String // For text searching purposes
 }

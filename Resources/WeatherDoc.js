@@ -19,6 +19,7 @@
   "pressure": Number, // Pressure (mmHg)
   "provider": [Object],  // Providers list as provider:{information:content,information:url, ...}
   "sampleDate": Date,  // Sample date
-  "lastUpDated": Date, // Grails generated information
-  "dateCreated": Date // Grails generated information
+  "lastUpDated": Date, // Extra information
+  "dateCreated": Date, // Extra information
+  "fullName": String // For text searching purposes
 }
