@@ -12,6 +12,7 @@
   \paragraph{El siguiente diagrama de clases muestra el modelo que define el estándar de los datos.}
     \begin{center}
       \includegraphics[width=14cm,height=10cm]{./images/SmartOwl_ClassDiagram}
+      \caption{Diagrama de clases}
     \end{center}
 
   \newpage
@@ -24,9 +25,12 @@
     \paragraph{La técnica de Web Scraping fue utilizada para la extracción de los archivos que generan las diferentes estaciones ubicadas en los estados de las república.}
     \paragraph{Para ello se busco la url de cada archivo generado en todas las estaciones del país con ayuda de la biblioteca \textbf{tagsoup}.}
     \paragraph{Después de obtener las urls se persistieron en una base de datos no relacional de tipo llave-valor, en donde la llave es el valor de la latitud y longitud de la estación que genera la información}
+    \begin{figure}[b!]
     \begin{center}
       \includegraphics[width=14cm,height=10cm]{./images/DF_Stations}
+      \caption{Estaciones con información climática del Distrito Federal}
     \end{center}
+    \end{figure}
     \paragraph{Este proceso se ejecuta una sola vez en la aplicación, ya que cuando se despliega se verifica que ya existan las urls de los archivos en la base de datos}
     \paragraph{Ya que se tienen la información de los archivos disponible, se toma busca en la base la url del que tenga la latitud y longitud más cercana a los parámetros de consulta de la API para descargarlo y posteriormente iniciar el proceso extracción de las variables} 
     \paragraph{La segunda fuente con la que se intenta complementar el modelo es Weather Underground.}
