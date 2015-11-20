@@ -49,7 +49,7 @@
     \paragraph{\textbf{\emph{Model}} es la capa de interacción con la base de datos, ésta se encarga de las operaciones mejor conocidas como CRUD (Create, Read, Update and Delete),  persistiendo la información en MongoDB, utilizando los canales de Vert.x para su convivencia con la antes mencionada.}
     \paragraph{Para poder exponer los datos, se hará uso de un servidor web minimalista orientado a micro servicios desarrollado en Vert.x, éste será un servicio público que formará parte de la infraestructura final de Ambienta2MX.}
     \paragraph{El servicio expuesto se encargará de las búsquedas a nivel base de datos y en caso de no encontrar la información buscará en terceros para poder agregarla a la base de datos y así ir mejorando el contenido de nuestro índice cartográfico.}
-    \paragraph{Considerando las bondades que nos brinda el framework Vert.x, se generó un canal para la resolución de la información utilizando el servicio de Google Maps, éste canal interactua de forma directa con el servicio de places expuesto a todos los usuarios o módulos del sistema.}
+    \paragraph{Considerando las bondades que nos brinda el framework Vert.x, se generó un canal para la resolución de la información utilizando el servicio de Google Maps, éste canal interactúa de forma directa con el servicio de places expuesto a todos los usuarios o módulos del sistema.}
     \paragraph{La comunicació principal será de tipo REST, para el proceso de 
     obtención de información relacionada al territorio nacional.}
   \subsubsection{Factibilidad}      
