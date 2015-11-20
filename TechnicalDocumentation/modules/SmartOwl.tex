@@ -34,12 +34,12 @@
     \paragraph{Este sitio expone un servicio que recibe un código de ciudad para obtener la información climática.}
     \begin{figure}[b!]
       \begin{center}
-        \includegraphics[width=12cm,height=17cm]{./images/WeatherUnderground}
+        \includegraphics[width=12cm,height=12cm]{./images/WeatherUnderground}
         \caption{Consulta al servicio de WeatherUnderground}
       \end{center}
     \end{figure}
     \paragraph{Finalmente, si el modelo de datos aún no está completo, se consulta a la API de Forecast.io para buscar los datos faltantes. Esta es la última opción de búsqueda ya que la API tiene un número limitado de consultas por día.}
-    \paragraph{Smart Owl proporcionará}
+  \newpage
   
   \subsection{Restricciones}
     \paragraph{En algunas ocasiones no será posible encontrar toda la información climática o de contaminación.}
@@ -49,6 +49,27 @@
   \subsection{Arquitectura}
     \paragraph{El módulo se realizó pensando en una arquitectura orientada a Microservicios.}
     \paragraph{Smart Owl es un microservicio que se despliega con un Tomcat embebido y expone la información siguiendo las convenciones de una aplicación REST.}
+
+    \paragraph{El siguiente diagrama de clases muestra el modelo que define el estándar de los datos.}
+    \begin{figure}[b!]
+      \begin{center}
+        \includegraphics[width=14cm,height=10cm]{./images/SmartOwl_ClassDiagram}
+        \caption{Diagrama de clases}
+      \end{center}
+    \end{figure}
+    \paragraph{A continuación se muestran los diagramas de secuencia planteados para el funcionamiento del módulo mencionado.}
+
+    \begin{figure}[b!]
+      \begin{center}
+        \includegraphics[width=14cm,height=9cm]{./images/SmartOwlSequenceDiagram}
+      \end{center}
+    \end{figure}
+
+    \begin{figure}[b!]
+      \begin{center}
+        \includegraphics[width=14cm,height=9cm]{./images/SmartOwlSequenceDiagram2}
+      \end{center}
+    \end{figure}
 
   \subsection{Estudio de Factibilidad}
     \paragraph{El desarrollo de la aplicación es posible ya que existen fuentes gratuitas que proveen la información necesaria para completar el modelo de datos que quiere exponerse y estandarizarse.}
@@ -62,43 +83,11 @@
     
     \paragraph{Hubo complejidad en la obtención de los datos ya que las fuentes presentan estructuras muy variadas, sin embargo, con ayuda de las pruebas unitarias fue posible implementar la funcionalidad para llenar el modelo de datos propuesto de manerá sencilla.}
   
-  \newpage
-  \subsection{Modelo de datos} 
-  \paragraph{El siguiente diagrama de clases muestra el modelo que define el estándar de los datos.}
-    \begin{figure}[b!]
-    \begin{center}
-      \includegraphics[width=14cm,height=10cm]{./images/SmartOwl_ClassDiagram}
-      \caption{Diagrama de clases}
-    \end{center}
-    \end{figure}
-  \newpage
-
-    
-
-  \subsection{Tecnologías de desarrollo}
+  \subsection{Implementación}
   \paragraph{Para el desarrollo del módulo se hizo uso del lenguaje de programación Groovy.} 
 
   \paragraph{Smart Owl es un microservicio que se despliega con ayuda de SpringBoot y expone dos urls: /weather y /pollution que reciben los parámetros \textbf{latitude} y \textbf{longitude} para la búsqueda de la información.}
 
   \paragraph{Se escribió un conjunto de pruebas unitarias para la funcionalidad de la obtención de datos y la estandarización de la información con la ayuda de Spock Framework.}
-  \paragraph{Gradle fue útli para las tareas de testing, administración de dependencias y la implementación del framework SpringBoot para el despliegue de la aplicación.}
 
-  \newpage
-  \begin{landscape}
-      \subsubsection{Diagrama por bloques.}
-        \paragraph{A continuación se mostrará el diagrama por bloques que define la estructura de Smart Owl.}
-        \begin{figure}[b!]
-        \centering
-        \includegraphics[width=22.5cm,height=12cm]{./images/DiagramaAncientTortoise.png}
-        \caption{Diagrama General de Smart Owl}
-      \end{figure}
-      \end{landscape}
-      \newpage
-    \paragraph{A continuación se muestran los diagramas de secuencia planteados para el funcionamiento del módulo mencionado.}
-    \begin{center}
-      \includegraphics[width=14cm,height=9cm]{./images/SmartOwlSequenceDiagram}
-    \end{center}
-    \begin{center}
-      \includegraphics[width=14cm,height=9cm]{./images/SmartOwlSequenceDiagram2}
-    \end{center}
-    \subsubsection{Diagrama por bloques}
+  \paragraph{Gradle fue útli para las tareas de testing, administración de dependencias y la implementación del framework SpringBoot para el despliegue de la aplicación.}
