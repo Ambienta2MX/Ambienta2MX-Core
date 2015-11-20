@@ -1,6 +1,6 @@
 \section{Friendly Dolphin}
   \subsection{Definición y objetivos}
-    \paragraph{Éste módulo es el encargado de brindar la información procesada al usuario a través de una página de internet. Es el módo visual que los usuarios finales tendrán para poder interactuar con el ecosistema Ambienta2MX.}
+    \paragraph{Éste módulo es el encargado de brindar la información procesada al usuario a través de una página de internet (véase Figura 8.1). Es el módo visual que los usuarios finales tendrán para poder interactuar con el ecosistema Ambienta2MX.}
     \paragraph{Se presenta cómo un módulo web que consumirá la información procesada y almacenada por las cuatro bases (MX1,MX2,MX3,MX4) y la base de soporte (Places).}
     \begin{figure}[h!]
         \centering
@@ -15,7 +15,7 @@
     \paragraph{Éste módulo se ve limitado por la API de Google Maps para la visualización de la información, ya que las consultas resultan limitadas en su versión gratuita, sin embargo, la cantidad es suficiente para demostrar la aplicación de los datos en una herramienta de visualización. Las restricciones estan definidas a 25,000 solicitudes por día y limitada a un segundo por petición o usuario.}
     \paragraph{La vista también cuenta con cierta limitantes, sólo podrá ser visualizada en navegadores con Internet Explorer 11+, Mozilla Firefox 20+ y Google Chrome 20+}
   \subsection{Arquitectura}
-    \paragraph{Friendly Dolpin contará con varios procesos y módulos a ser desarrollados. Éste módulo se desarrollará usando tecnologías cómo HTML, Javascript y CSS, además de contar con un ciclo continuo de desarrollo usando herramientas de apoyo cómo Yeoman, Gulp para el maquetado y gestión de tareas comunes en projectos de tipo web.}
+    \paragraph{Friendly Dolpin contará con varios procesos y módulos a ser desarrollados (véase Figura 8.2). Éste módulo se desarrollará usando tecnologías cómo HTML, Javascript y CSS, además de contar con un ciclo continuo de desarrollo usando herramientas de apoyo cómo Yeoman, Gulp para el maquetado y gestión de tareas comunes en projectos de tipo web.}
     \paragraph{Se hará uso del servidor interno que ofrece Gulp junto con las tareas y gestión de bibliotecas de terceros. En cuanto al desarrollo de los estilos necesarios para las vistas se implementará Bootstrap cómo maquetado CSS y finalmente el manejo de vistas, peticiciones y lógica dentro del navegador de los clientes se implementará un patrón de tipo SPA (Single Page Application)\cite{36} desarrollado por el equipo de trabajo.}
     \begin{figure}[b!]
       \centering
@@ -48,7 +48,7 @@
         \includegraphics[width=\textwidth]{./images/CapturaFriendlyDolphin}
       \caption{Mapas de Calor, Friendly Dolphin}
     \end{figure}
-    \paragraph{Cómo se puede visualizar en la imagen anterior los datos de clima de ciertas regiones del país, en este caso en el área de Baja California, utilizando un concepto llamado HeatMap (Mapa de Calor) que nos permite la transposición de un mapa de Google y los datos climatólogicos recolectados por el sistema de Ambienta2MX. Ésta vista puede ser vista por medio del formulario de busqueda ubicado en la parte superior de las vistas que fueron generadas.}
+    \paragraph{Cómo se puede visualizar en la imagen anterior los datos de clima de ciertas regiones del país, en este caso en el área de Baja California, utilizando un concepto llamado HeatMap (Mapa de Calor) que nos permite la transposición de un mapa de Google y los datos climatólogicos recolectados por el sistema de Ambienta2MX. Ésta vista puede ser vista por medio del formulario de busqueda ubicado en la parte superior de las vistas que fueron generadas (véase Figura 8.4).}
     \begin{figure}[b!]
       \centering
         \includegraphics[width=\textwidth]{./images/CapturaFriendlyDolphin2}

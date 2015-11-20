@@ -1,6 +1,6 @@
 \section{Hard Ant}
   \subsection{Definición y objetivos}    
-    \paragraph{Hard Ant es uno de los bloques funcionales base de Ambienta2MX, su función principal es la de enrutar las peticiones a las bases de tipo MX además de brindar la solución cartográfica (a nivel ubicación) interactuando con Fast Eagle.}
+    \paragraph{Hard Ant es uno de los bloques funcionales base de Ambienta2MX, su función principal es la de enrutar las peticiones a las bases de tipo MX además de brindar la solución cartográfica (a nivel ubicación) interactuando con Fast Eagle (véase Figura 8.16).}
     \begin{figure}[h!]
         \centering
           \includegraphics[width=\textwidth]{./images/DiagramaAmbienta2MX_HardAnt.png}
@@ -28,15 +28,15 @@
         \includegraphics[width=\textwidth]{./images/DiagramaHardAnt.png}
         \caption{Diagrama a bloques de Hard Ant}
       \end{figure}
-    \paragraph{En el diagrama se puede apreciar la replicación de ``Verticles'' que interactúan a través del mismo canal de información, esto brinda disponibilidad del servicio ya que las peticiones son atendidas y procesadas no sólo por un elemento existente si no varios. La interacción con este servicio se realizará utilizando servicios REST, utilizando el módulo de Cute Bunny como medio de comunicación con la vista que tendrá el usuario final.}
+    \paragraph{En el diagrama se puede apreciar la replicación de ``Verticles'' que interactúan a través del mismo canal de información, esto brinda disponibilidad del servicio ya que las peticiones son atendidas y procesadas no sólo por un elemento existente si no varios (véase Figura 8.17). La interacción con este servicio se realizará utilizando servicios REST, utilizando el módulo de Cute Bunny como medio de comunicación con la vista que tendrá el usuario final.}
     \paragraph{Considerando trabajos más pesados (Obtención de datos climáticos considerando un radio, cadena de búsqueda o bien información de un punto definido) se utilizarán procesos en segundo plano, esto es posible gracias a la implementación de ``Verticles'' nativas de Vert.x, tecnología que será usada para el desarrollo y despliegue final de éste módulo.}
-    \paragraph{Actualmente se propone el despliegue de varias ``Verticles'', además de las que el mismo framework despliega para el consumo de las bases de datos \cite{33}.Quedando en ocho, cuatro encargadas de la comunicación y distribución de la información y las cuatro restantes para atender peticiones.} 
+    \paragraph{Actualmente se propone el despliegue de varias ``Verticles'', además de las que el mismo framework despliega para el consumo de las bases de datos \cite{33}.Quedando en ocho, cuatro encargadas de la comunicación y distribución de la información y las cuatro restantes para atender peticiones (véase Figura 8.18).} 
     \paragraph{De forma específica, también se hará uso de los canales implementados por Vert.x para generar una comunicación con las bases de datos con la finalidad de poder generar la distribución de estas. Los canales podrían ser accedidos siempre y cuando se pertenezca a la misma red o bien al cluster de Vert.x, esta modalidad no ha sido habilitada por cuestiones de seguridad.}
   \subsection{Factibilidad} 
     \paragraph{Considerando el mismo modo de trabajo que en }
   \subsection{Implementación}
     \paragraph{Hablando más a detalle, Hard Ant, puede ser desplegado utilizando la línea de comandos gracias a las funciones que nos provee Gradle, framework utilizado para el maquetado, resolución de dependencias y gestión de tareas del proyecto. \cite{34}}
-    \paragraph{El código y el proyecto como tal se encuentran en línea utilizando Git\cite{38} en conjunto con Github\cite{39}, para el proceso de control de versiones. Para la gestión de tareas y desarrollo del proyecto fue utilizado Gradle en conjunton con Vert.x.}
+    \paragraph{El código y el proyecto como tal se encuentran en línea utilizando Git\cite{38} en conjunto con Github\cite{39}, para el proceso de control de versiones (véase Figura 8.19). Para la gestión de tareas y desarrollo del proyecto fue utilizado Gradle en conjunton con Vert.x.}
     \paragraph{Las ventajas que nos ofrece Git/Github es la integración con procesos de desarrollo utilizando metodologías ágiles. La siguiente imagen muestra el control y manejo de issues (análogos a objetivos o features) que fueron desarrollados para cumplir con los objetivos y mejoras planteadas para cada módulo.}
     \begin{figure}[h!]
         \centering

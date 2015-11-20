@@ -1,13 +1,11 @@
 \section{Smart Owl}
   \subsection{Definición}
-  \paragraph{La función principal del Smart Owl es obtener información de diversas fuentes que proveen datos climáticos y de contaminación y exponer esta información de manera estandarizada con una estructura definida en formato JSON.}
-
+  \paragraph{La función principal del Smart Owl es obtener información de diversas fuentes que proveen datos climáticos y de contaminación y exponer esta información de manera estandarizada con una estructura definida en formato JSON (véase Figura 8.7).}
   \begin{figure}[h!]
     \centering
       \includegraphics[width=\textwidth]{./images/DiagramaAmbienta2MX_SmartOwl.png}
     \caption{Smart Owl, Modulo de Ambienta2MX.} 
   \end{figure}
-
   \paragraph{Todas la información que se encontrará en las bases de datos de tipo MX será obtenida a través de Smart Owl, muchas de las fuentes no cuentan con los datos climatológicos completos, principalmente las gubernamentales como: CONAGUA, INEGI o SMN, por citar algunas.}
   \paragraph{Considerando esa problematica, Smart Owl busca y trata de resolver la información de los campos faltantes tomando como base distintas fuentes de datos, algunas establecidas y otras de tipo gubernamental.}
   \paragraph{También se tomará información de fuentes que tipo dinámica,es decir, cuya información suele ser actualizada en entre periodos de una o dos horas. Estas fuentes suelen contar con RESTFul API's para consumo de forma programática.}
@@ -19,7 +17,7 @@
   
     \paragraph{Una vez que se definieron las fuentes principales para la obtención de datos se escribió una prueba que verifica la obtención de la información de cada una de ellas.} 
     \paragraph{La primera fuente de la que se extrajo información fueron los archivos que publica cada 10 minutos la página de la CONAGUA en el sitio \textbf{http://smn.cna.gob.mx/emas/}.}
-    \paragraph{La técnica de Web Scraping fue utilizada para la extracción de los archivos que generan las diferentes estaciones ubicadas en los estados de las república.}
+    \paragraph{La técnica de Web Scraping fue utilizada para la extracción de los archivos que generan las diferentes estaciones ubicadas en los estados de las república (véase Figura 8.8).}
     \paragraph{Para ello se busco la url de cada archivo generado en todas las estaciones del país con ayuda de la biblioteca \textbf{tagsoup}.}
     \paragraph{Después de obtener las urls se persistieron en una base de datos no relacional de tipo llave-valor, en donde la llave es el valor de la latitud y longitud de la estación que genera la información}
     \begin{figure}[b!]
@@ -31,14 +29,13 @@
     \paragraph{Este proceso se ejecuta una sola vez en la aplicación, ya que cuando se despliega se verifica que ya existan las urls de los archivos en la base de datos}
     \paragraph{Ya que se tienen la información de los archivos disponible, se toma busca en la base la url del que tenga la latitud y longitud más cercana a los parámetros de consulta de la API para descargarlo y posteriormente iniciar el proceso extracción de las variables} 
     \paragraph{La segunda fuente con la que se intenta complementar el modelo es Weather Underground.}
-    \paragraph{Este sitio expone un servicio que recibe un código de ciudad para obtener la información climática.}
+  \paragraph{Este sitio expone un servicio que recibe un código de ciudad para obtener la información climática (véase Figura 8.9).}
     \begin{figure}[b!]
-      \begin{center}
-        \includegraphics[width=12cm,height=12cm]{./images/WeatherUnderground}
-        \caption{Consulta al servicio de WeatherUnderground}
-      \end{center}
+      \centering 
+      \includegraphics[width=12cm,height=12cm]{./images/WeatherUnderground}
+      \caption{Consulta al servicio de WeatherUnderground}
     \end{figure}
-    \paragraph{Finalmente, si el modelo de datos aún no está completo, se consulta a la API de Forecast.io para buscar los datos faltantes. Esta es la última opción de búsqueda ya que la API tiene un número limitado de consultas por día.}
+  \paragraph{Finalmente, si el modelo de datos aún no está completo, se consulta a la API de Forecast.io para buscar los datos faltantes. Esta es la última opción de búsqueda ya que la API tiene un número limitado de consultas por día.}
   \newpage
   
   \subsection{Restricciones}
