@@ -1,0 +1,43 @@
+% Nginx Instalation process
+%
+% External sources
+%
+
+\newpage
+\section*{Instalación de Nginx}
+	\paragraph{Para sistemas basados en Unix (Linux y Mac).}
+	\paragraph{La instalación se puede realizar desde el gestor de paquetes dependiendo la distribución a usar, el ejemplo actual se encuentra en un sistema de tipo Ubuntu en su versión 14.04.}
+	\paragraph{Sólo basta con instalar Nginx desde la línea de comandos utilzando el siguiente comando}
+	\begin{alltt}
+		sudo apt-get install nginx -y
+	\end{alltt}
+	\paragraph{Esto bajará las bibliotecas, archivos fuente y dependencias necesarias para instalar Nginx, posteriormente se procede a la edición del archivo de configuración para generar la unión con los demás módulos de Ambienta2MX.}
+	\paragraph{Se tendrá que modificar el archivo ubicado en ``/etc/nginx/sites-enabled/default'', agregando líneas o bien reemplazando el contenido del archivo con lo que se muestra a continuación:}
+	\begin{alltt}
+		upstream api_fasteagle \{
+		 server    127.0.0.1:7777;
+		\}
+		server \{
+		 listen 80 default_server;
+		 listen [::]:80 default_server ipv6only=on;
+		 root /usr/share/nginx/html;
+		 index index.html index.htm;
+		 server_name localhost;
+
+		 location / \{  
+		  try_files $uri $uri/ =404;
+		 \}
+
+		 location /api/fasteagle \{
+		    proxy_set_header X-Real-IP $remote_addr;
+		    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+		    proxy_set_header Host $http_host;
+		    proxy_set_header X-NginX-Proxy true;
+		    rewrite ^/api/fasteagle/?(.*) /$1 break;
+		    proxy_pass http://api_fasteagle;
+		    proxy_redirect off;
+		  \}  
+		\} 
+	\end{alltt}
+	\paragraph{La configuración de Nginx puede ser replicada para cualquier servicio o servidor externo, utilizando la directiva upstream, que funciona como un proxy entre el servidor web y los servidores de aplicación.}
+\addcontentsline{toc}{chapter}{Anexo 6: Instalación y configuración de Nginx} 
