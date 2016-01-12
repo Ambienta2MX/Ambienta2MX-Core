@@ -1,7 +1,8 @@
-\documentclass[11pt]{report}
+\documentclass[hidelinks,12pt]{report}
 \setcounter{tocdepth}{3} %shows all levels incl. paragraph
+\usepackage{mathptmx}
 \usepackage[spanish]{babel}
-\usepackage[tmargin=1in,bmargin=1in,lmargin=1.25in,rmargin=1.25in]{geometry}
+\usepackage[tmargin=1in,bmargin=1in,lmargin=1.25in,rmargin=1.0in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
 \usepackage[usenames]{color}
@@ -11,7 +12,7 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{enumitem}
-\usepackage[utf8x]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage{booktabs}
 \usepackage{listings}
 \usepackage{pdflscape}
@@ -57,10 +58,10 @@
 
 
 \author{[Technical Report]}
-\author{Jimenez García Eduardo Gamaliel\and Ortiz Chávez Alejandro\and Resendiz Arteaga Juan Alberto}
+\author{Jimenez García Eduardo Gamaliel\and Resendiz Arteaga Juan Alberto}
 
 \begin{document}
-  \input{cover}
+  %\input{cover}
   \input{index}
   \input{Introduction}
   \input{StateOfTheArt}  
@@ -71,7 +72,8 @@
   \input{ModulesDescription}
   \input{RiskAssessment}
   \input{Conclusions}
-  \input{Annexed}
-  \input{Glossary}
+  \input{FutureWork}
   \input{References}
+  \input{Glossary}
+  \input{Annexed}
 \end{document}
