@@ -1,0 +1,42 @@
+\documentclass[12pt]{report}
+\author{Jimenez García Eduardo Gamaliel\and Resendiz Arteaga Juan Alberto}
+\begin{document}
+
+\chapter{Resúmen}
+\paragraph{"Ambienta2MX" es una plataforma de análisis, estandarización y muestreo de información ambiental como variables de temperatura, humedad, presión e índices de contaminación. El sistema se compone del módulo de consulta, registro masivo y estandarización de datos relacionados con el medio ambiente. Ésta plataforma permitirá conceptualizar la información de variables ambientales e índices de contaminación almacenada por el INEGI y otras instituciones públicas o privadas. Dicha información puede ser utilizada para fines educativos, productivos y para la sociedad en general.  Los usuarios finales podrán hacer uso de Ambienta2MX a través de una página de internet; la interacción se realizará a través de servicios web tipo REST con un estándar de datos propuesto por el equipo de trabajo.}
+
+\chapter{Introducción}
+  \paragraph{Existen diversas herramientas que proporcionan un servicio de consulta de datos climatológicos e índices de contaminación, sin embargo, no han tenido el impacto o el apoyo necesario para crecer y proveer la infraestructura lógica y/o física para satisfacer ese problema.}
+
+  \paragraph{Problemas de ese tipo ha sido atacados en varios países, teniendo un impacto favorable en la consulta de información de cierta área en específico.}
+
+  \paragraph{Un sistema de información geográfica (GIS, por sus siglas en inglés) es un sistema computacional de captura, almacenamiento y exposición de datos relacionados a la superficie de la Tierra. Los SIG pueden mostrar información de varios tipos en un mismo lienzo (usualmente mapas) lo que facilita el análisis de la información recolecatada.}
+
+  \paragraph{El proyecto Mapa interactivo del Instituto Nacional de Estadística y Geografía es un sistema de información Geográfica (SIG), que integra información de los elementos naturales  y culturales que conforman el entorno geográfico del país y permite relacionarlos con información estadística. Cuenta con la versión para PC y la versión WEB. A grandes rasgos el objetivo del Mapa Interactivo es promover y facilitar el uso, interpretación e integración de la información geográfica y estadística nacional, que contribuya al conocimiento y estudio de las características del Territorio, con la finalidad de propiciar la toma de decisiones basados en elementos técnicamente sustentados.}
+
+  \paragraph{Actualmente no existe un estándar de datos geográficos a nivel nacional. Han existido aproximaciones mediante concursos que instituciones públicas como el INEGI ha publicado, o simplemente han existido propuestas que han brindado una solución incompleta a la unión y manejo de información geográfica, geodésica, hidrográfica, climática, topográfica, etc.}
+
+\chapter{Metodología}
+  \paragraph{Ambienta2MX es el nombre de la plataforma que pretende formar parte de una macro solución orientada a la estandarización de datos geoespaciales que el INEGI y otras instituciones públicas tienen en su haber.}
+  \paragraph{El sistema Ambienta2MX se compone de 5 módulos principales; Friendly Dolphin brinda la información procesada al usuario. A través de este módulo el usuario podrá seleccionar una ubicación en un mapa y determinar el clima y la calidad del aire más reciente que proporcionen las fuentes utilizadas. \\ Este módulo también permite al usuario descargar el historial de las mediciones en un formato .csv.}
+
+  \paragraph{Cute Bunny, otro de los módulos de Ambienta2MX es parte medular para la comunicación con otros sistemas. Es el encargado de proporcionar los respectivos servicios de tipo REST a otros sistemas o módulos que deseen consultar la información almacenada en las bases de datos.}
+
+  \paragraph{HardAnt, otro bloque funcional de la aplicación, fue diseñado para poder satisfacer la demanda en las cuatro bases de datos distrubidas, contando con un índice que se encarga de enviar la consulta a una base definda con base en la ubicación que le proporciona Fast Eagle.}
+
+  \paragraph{El módulo Fast Eagle forma parte de la arquitectura final de Ambienta2MX. El propósito principal de este módulo es brindar la información cartográfica de México por medio de un servicio expuesto, considerando latitud, longitud o nombre de la localidad deseada.}
+
+  \paragraph{SmartOwl es el módulo encargado de consultar las diferentes fuentes que proveen información climática y de contaminación y exponer esta información de manera estandarizada con una estructura de datos definida en un formato JSON.}
+
+\chapter{Resultados}
+    
+\chapter{Conclusiones}
+  \paragraph{Se desarrollo una herramienta útil para el análisis de variables ambientales de fácil acceso ya que expone la información a través de servicios REST. \\}
+
+\chapter{Reconocimientos}
+  \paragraph{}
+
+\chapter{Referencias}
+
+\end{document}
+
